@@ -25,28 +25,16 @@ namespace LSBSound
         {
         }
 
-       public byte[] insertTextToImage() // LSB -кодировние
+       public void insertTextToSound() // LSB -кодировние
         {
-            bitsText = new BitArray(audioBytes);
-            int bitCount = 0; //счетчики битов сообщения и битов аудио
-            int allbit = 0;
-            bool getAllNeedPixel = false; // булевая переменная, необходимая для выхода из внешнего цикла
-            for (int i = 0, j = 0; i < audioBytes.Length && j < bitsText.Count; i++)
+            // Вычисляем длину сообщения в битах
+            int messageLength = message.Length;
+            int bitsNeeded = 0;
+            while (messageLength > 0)
             {
-                
+                messageLength >>= 1;
+                bitsNeeded++;
             }
-
-            // for (int i = 0, j = 0; i < bitsSound.Length && j < bitsText.Length; i++, j++)
-            // {
-            //     for (int k = 0; k < 8; k++)
-            //     {
-            //         byte bit = (byte)(((int)secretMessage[j] >> k) & 1);
-            //         audioBytes[i] = (byte)((audioBytes[i] & 254) + bit);
-            //         i++;
-            //     }
-            //     i--; // Важно не забыть уменьшить i, чтобы не пропустить байты аудиофайла.
-            // }
-            return null; // возвращаем результат
         }
 
         public void GetBitsOfMessage(string message) // получение битового массива сообщения
