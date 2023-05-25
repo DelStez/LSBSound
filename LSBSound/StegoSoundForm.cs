@@ -40,6 +40,11 @@ namespace LSBSound
 
         private void comboBoxmode_SelectedIndexChanged(object sender, EventArgs e)
         {
+        }
+
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            
             int numBit = Convert.ToInt32(comboBox1.SelectedItem);
             if (comboBoxmode.SelectedIndex == 0 && player != null)
             {
@@ -48,27 +53,7 @@ namespace LSBSound
                     BitArray mess = new BitArray(Encoding.UTF8.GetBytes(Content));
                     LSB newSoundMessage = new LSB( Content, numBit, fileSoundPath);
                     newSoundMessage.insertTextToImage();
-                    // SaveFileDialog save = new SaveFileDialog();//диалог. окно -сохранение bmp файла
-                    // save.Filter = "Звуковые файлы (*.wav, *.mp3, *.ogg, *.m4a)|*.wav;*.mp3;*.ogg; *.m4a|Все файлы (*.*)|*.*";
-                    // ImageFormat format = ImageFormat.mp;
-                    // save.InitialDirectory = @"C:\";
-                    // if (save.ShowDialog() == DialogResult.OK)
-                    // {
-                    //     string ext = System.IO.Path.GetExtension(save.FileName);
-                    //     switch(ext)
-                    //     {
-                    //         case ".jpg":
-                    //         format = ImageFormat.Jpeg;
-                    //         break;
-                    //         case ".bmp":
-                    //         format = ImageFormat.Bmp;
-                    //         break;
-                    //         case ".png":
-                    //             format = ImageFormat.Png;
-                    //             break;
-                    //     }
-                    //     picBox.Image.Save(save.FileName, format);// сохранение изображения
-                    // }
+                    
 
                 }
                 else 
@@ -76,18 +61,9 @@ namespace LSBSound
             }
             else if (comboBoxmode.SelectedIndex == 1 && player != null)
             {
-                
-                // LSB newImageMessage = new LSB((Bitmap)picBox.Image, getRGBcode, numBit);// cоздания нового LSB - класса (содержит методы для декодировки LSB метода)
-                // string temp = newImageMessage.ExtractMessage((Bitmap)picBox.Image);
-                // contentBox.Text = temp.Replace("\0", "");// показать результат (немного отредактирован для читабельности)
             }
             else
                 MessageBox.Show("Отсуствует аудиофайл", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        }
-
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            int numBit = Convert.ToInt32(comboBox1.SelectedItem);
         }
 
         private void loadSound_Click(object sender, EventArgs e)

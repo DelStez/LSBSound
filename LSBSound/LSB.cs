@@ -33,8 +33,7 @@ namespace LSBSound
             bool getAllNeedPixel = false; // булевая переменная, необходимая для выхода из внешнего цикла
             for (int i = 0, j = 0; i < audioBytes.Length && j < bitsText.Count; i++)
             {
-                BitArray bitsOfByte = new BitArray(audioBytes[i]);
-                bitsOfByte[bitsOfByte.Count - 1] = bitsOfByte[bitsOfByte.Count - 1] ? true : false;
+                
             }
 
             // for (int i = 0, j = 0; i < bitsSound.Length && j < bitsText.Length; i++, j++)
@@ -54,17 +53,6 @@ namespace LSBSound
         {
             byte[] temp = Encoding.Default.GetBytes(message); //перевод в массив байтов
             bitsText = new BitArray(temp); // перевод в массив битов
-        }
-        private int SetBit(bool currentBit, int i)
-        {
-            BitArray n = new BitArray(new int[] {  }); 
-            if (currentBit)// если значение бита = 1
-                n[i] = true;
-            else
-                n[i] = false;
-            int[] y = new int[1]; //получаем значение  пикселя в привычном виде (натурального числа)
-            n.CopyTo(y, 0);
-            return y[0];
         }
     }
 }
