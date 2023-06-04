@@ -1,0 +1,11 @@
+G:\GitHub\LSBSound\LSBSound\LSBSound\bin\Debug\LSBSound.exe.config
+G:\GitHub\LSBSound\LSBSound\LSBSound\bin\Debug\LSBSound.exe
+G:\GitHub\LSBSound\LSBSound\LSBSound\bin\Debug\LSBSound.pdb
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.csproj.AssemblyReference.cache
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.csproj.SuggestedBindingRedirects.cache
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.Properties.Resources.resources
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.csproj.GenerateResource.cache
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.csproj.CoreCompileInputs.cache
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.exe
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.pdb
+G:\GitHub\LSBSound\LSBSound\LSBSound\obj\Debug\LSBSound.Form1.resources
